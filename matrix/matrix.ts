@@ -20,12 +20,9 @@ class Matrix {
     }
 
     private generateColumns() {
-        for (let i = 0; i < this.rows[0].length; i++) {
-            this.columns.push([]);
-            for (const row of this.rows) {
-                this.columns[i].push(row[i]);
-            }
-        }
+        this.columns = this.rows[0].map((_, colIndex) =>
+            this.rows.map((row) => row[colIndex])
+        )
     }
 }
 
