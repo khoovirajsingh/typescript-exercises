@@ -26,7 +26,7 @@ describe('School', () => {
     expect(gradeSchool.studentRoster()).toEqual(expectedDb)
   })
 
-  xit('adding more students to the same grade adds them to the roster', () => {
+  it('adding more students to the same grade adds them to the roster', () => {
     gradeSchool.addStudent('Blair', 2)
     gradeSchool.addStudent('James', 2)
     gradeSchool.addStudent('Paul', 2)
